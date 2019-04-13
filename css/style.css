@@ -1,0 +1,507 @@
+*,html,body
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+
+    height: 112px;  /*size of the nav bar*/
+    line-height: 112px; /*aligning word elements in the middle of nav bar*/
+    position: fixed; /*nav bar does not move during scrolling... but without z-index the bar disappears*/
+    z-index: 1;/*brings nav bar layer to the top*/
+    width: 100%; 
+}
+.secondary
+{
+    background-color: deepskyblue;
+    box-shadow: 0px 0px 17px 0px;
+    transition: all 0.5s ease-in;
+}
+ul
+{
+    list-style: none;
+}
+
+ul li
+{
+    display: inline-block;
+}
+
+header nav
+{
+    float: right;
+}
+
+.logo img
+{
+    margin-top: 0px; /*positioning the logo in the middle. No of px depends on nature of image*/
+}
+
+header nav ul li a
+{
+    padding-right: 30px; /*spacing the nav bar list elements*/
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+}
+
+header nav ul li a:hover
+{
+    text-decoration: none;
+    color: red;
+}
+.slider1
+{
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(..//image/background1.jpg);/*rgba red green blue alpha... for obesity... you dont need to go to photoshop before importing the image*/
+    background-size: 100% 100%;
+}
+.slider,.slider ul,.slider ul li 
+{
+    height: 710px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.slider h2
+{
+    font-weight: bold; 
+    margin-top: 270px;
+}
+.slider span
+{
+    color: orange;
+}
+.slider a
+{
+    padding: 10px 40px;
+    margin-right: 10px; /*space between buttons*/
+}
+.slider a.btn-half
+{
+    background-color: deepskyblue;
+    color: white; /*font color*/
+}
+.slider a.btn-half:hover
+{
+    background-color: darkblue;
+    transition: 0.5s ease-in;
+}
+.slider a.btn-full
+{
+    background-color: orange;
+    color: white;
+}
+.slider a.btn-full:hover
+{
+    background-color: orangered;
+    transition: 0.5s ease-in;
+}
+.slider2
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(..//image/background2.jpg);
+    background-size: 100% 100%;
+}
+.slider3
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(..//image/background3.jpg);
+    background-size: 100% 100%;
+}
+.slider i
+{
+    font-size: 35px;
+    margin-right: 10px; /*space between icons*/
+}
+
+
+.intro-area
+{
+    position: relative;
+    padding: 100px 0px; 
+    text-align: center;
+}
+.sub-heading
+{
+    position: relative;
+    margin-bottom: 75px;
+}
+.sub-heading:before /*fluid grid --the line*/
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -3%;
+    width: 6%;
+    height: 1px;
+    background-color: deepskyblue;
+    z-index: 1;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub-heading:hover:before
+{
+    width: 24%;
+    margin-left: -12px;
+}
+.sub-heading::after
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;   
+    margin-left: -12%;
+    width: 24%;
+    height: 1px;
+    background-color: bisque;
+}
+.sub-heading p
+{
+    color: rgb(178, 184, 181);
+    display: inline-block;
+    padding: 0px 0px 20px;
+    position: relative;
+    line-height: 24px;
+    letter-spacing: 0.025em; 
+}
+.intro-block
+{
+    position: relative;
+    background: rgb(245, 243, 243);
+    margin: 50px 0px 0px;
+    text-align: center;
+    padding: 70px 25px 40px;
+}
+.intro-block:hover, .intro-block.active
+{
+    background: deepskyblue;
+}
+.intro-block:hover
+{
+    transition: .6s ease;
+    -webkit-transition: .6s ease;
+    -moz-transition: .6s ease;
+    -ms-transition: .6s ease;
+    -o-transition: .6s ease;
+}
+.intro-block .intro-icon
+{
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    margin-left: -31px;
+}
+.intro-block .fa
+{
+    width: 63px;
+    height: 63px;
+    font-size: 30px;
+    color: white;
+    line-height: 2;
+    background: deepskyblue;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px rgb(194, 229, 243);
+}
+.intro-block:hover .fa, .intro-block.active .fa
+{
+    background-color: white;
+    color: deepskyblue;
+    box-shadow: 0px 0px 0px 10px deepskyblue;
+}
+.intro-block h3
+{
+    font-size: 18px;
+    color: deepskyblue;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.intro-block p
+{
+    color: rgb(99, 89, 89);
+}
+.intro-block:hover h3, .intro-block:hover p
+{
+    color: white;
+}
+.feature-area
+{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../image/background4.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed; /*as you scroll, the background image remains fixed*/
+}
+/*make color of text visible*/
+.title h2,p
+{
+    color: white;
+}
+.single-feature h3
+{
+    color: white;
+}
+.title .sub-heading p
+{
+    color: white;
+}
+/*making the tabular grid*/
+.single-feature
+{
+    position: relative;
+    width: 325px;
+    float: left;
+    padding: 30px 0;
+    text-align: center;
+    border-right: 1px solid deepskyblue;
+    border-bottom: 1px solid deepskyblue;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+}
+
+.feature-icon:after
+{
+    content: "";
+    display:table;
+}
+.feature-icon:after
+{
+clear: both;
+}
+
+.featured-icon
+{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.single-feature i.fa
+{
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: deepskyblue;
+    color: white;
+    width: 64px;
+    height: 64px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+}
+/*.feature-block:hover .single-feature
+{
+    border-color: white;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+}*/
+.single-feature:hover .featured-icon .fa
+{
+    border: 2px solid deepskyblue;
+    background: white;
+    color: deepskyblue; 
+}
+/*Removing the right border line*/
+.single-feature:nth-of-type(even)
+{
+    border-right: none;
+}
+
+/*Removing the bottom border line*/
+.single-feature:nth-last-child(2)
+{
+    border-bottom: none;
+}
+.single-feature:last-child
+{
+    border-bottom: none;
+}
+/*make heading OUR PROGRAMS come down a bit*/
+.feature-area
+{
+    padding: 100px 0;
+}
+/*working on the side image*/
+.feature-mockup
+{
+    bottom: -300px; /*negative coz we are pulling the image down*/
+    position: relative;
+}
+.office-area .title h2
+{
+    color:black;
+}
+.office-area .title .sub-heading p
+{
+    color: darkgrey;
+}
+.office-area
+{
+    padding: 100px 0;
+}
+.office-list ul
+{
+    list-style: none; /*ensures no bulets*/
+}
+.office-list li 
+{
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 80px;
+}
+.office-list li:hover i
+{
+    color: white;
+    background-color: deepskyblue;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    -ms-transition: .5s ease;
+}
+.office-icon
+{
+    position: absolute;
+    left: 0;
+}
+.office-icon i
+{
+    width: 63px;
+    height: 63px;
+    text-align: center;
+    font-size: 30px;
+    background: white;
+    color: deepskyblue;
+    border-radius: 50%;
+    border: 2px solid deepskyblue;
+    line-height: 63px;   
+}
+.office-details h3
+{
+    color: deepskyblue;
+    font-weight: 700;
+}
+.office-details p
+{
+    color: grey;
+    font-weight: 200;
+}
+.office-area img
+{
+    margin-left: 10px;
+}
+
+.testimonial
+{
+    background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(../image/camp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: -100px; /*to push this section up inorder to remove space between th sections*/
+}
+.testimonial .carousel-indicators
+{
+    bottom: -60px;
+}
+.testimonial h2
+{
+    color: white;
+}
+.testimonial h4
+{
+    color: orangered;
+}
+.testimonial .sub-heading p
+{
+    color: white;
+}
+.carousel-inner img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid deepskyblue;
+    padding: 5px;
+}
+.testimonial .carousel-indicators li.active /*to change color of active indicator to deepskyblue*/
+{
+    background-color: deepskyblue;
+    border: deepskyblue;
+}
+.testimonial .carousel-indicators
+{
+    border: deepskyblue;
+}
+.team-area
+{
+    padding: 100px 0px; 
+}
+.team-area .sub-heading
+{
+    margin-bottom: 100px;
+}
+/*.team-indiv
+{
+    position: absolute;
+    left: 50%;
+    margin-left: -50%;
+    top: -50%;
+    overflow: hidden;
+    min-height: 100px;
+    width: 100px;
+    min-width: 100px;
+    border: 10px solid deepskyblue;
+}*/
+.team-indiv img
+{
+    width: 120px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid deepskyblue;
+    padding: 5px;
+}
+.team-indiv h3
+{
+    color: deepskyblue;
+    font-size: 20px;
+}
+
+/*trial chap*/
+.team-description p
+{
+    color: black;
+}
+.team-description h3
+{
+    color: grey;
+}
+.our-team
+{
+    position: relative;
+    background: rgb(245, 243, 243);
+    margin: 50px 0px 0px;
+    text-align: center;
+    padding: 40px 25px 40px;
+}
+.our-team:hover, .our-team.active
+{
+    background: deepskyblue;
+}
+.our-team:hover
+{
+    transition: .6s ease;
+    -webkit-transition: .6s ease;
+    -moz-transition: .6s ease;
+    -ms-transition: .6s ease;
+    -o-transition: .6s ease;
+}
